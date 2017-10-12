@@ -16,10 +16,10 @@ body {background-color: #D2B48C;}
 table {border-collapse: collapse; width: 100%; text-align: center;}
 table, th, td {border: 2px solid white;}
 th {background-color: #FFFF99; color: #696969; height: 50px; vertical-align: bottom; padding: 15px;text-align: left;}
-td {background-color: #F08080; color: #FFFFFF; height: 30px; vertical-align: bottom; padding: 10px;text-align: left;}
-tr:hover {background-color: #CCCCCC}
-tr:nth-child(even) {background-color: #F2F2F2}
-tr:nth-child(odd) {background-color: #EDEDED}
+table tr:hover td{background-color: #CCCCCC;}
+table tr:nth-child(even) {background-color: #F2F2F2}
+table tr:nth-child(odd) {background-color: #EDEDED}
+td {background: #F08080; color: #FFFFFF; height: 30px; vertical-align: bottom; padding: 10px;text-align: left;}
 label {display: inline-block; text-align: left; width: 60px;}
 
 

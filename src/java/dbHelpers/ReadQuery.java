@@ -97,7 +97,7 @@ public class ReadQuery {
                 table += "Price";
                 table += "</th>";
                 
-               
+          
         
         try {
             while(this.results.next()){
@@ -142,7 +142,7 @@ public class ReadQuery {
         } catch (SQLException ex) {
             Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
-       
+      
         table += "</table>";
                 
                 return table;
