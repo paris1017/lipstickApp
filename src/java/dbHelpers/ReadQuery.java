@@ -25,12 +25,15 @@ public class ReadQuery {
     private Connection conn;
     private ResultSet results;
     
-    public ReadQuery(){
+    public ReadQuery(){   //constructor
    
-    Properties props = new Properties();
-        InputStream instr = getClass().getResourceAsStream("dbConn.properties");
-        try {
-            props.load(instr);
+   
+
+        
+             Properties props = new Properties();
+             InputStream instr = getClass().getResourceAsStream("dbConn.properties");
+         try{
+             props.load(instr);
         } catch (IOException ex) {
             Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -72,7 +75,7 @@ public class ReadQuery {
         
         String table = "";
         table += "<table border=1>";
-        table += "<table>";
+        
         
                 table += "<th>";
                 table += "ItemID";
@@ -128,8 +131,12 @@ public class ReadQuery {
                 table += lipstick.getPrice();
                 table += "</td>";
                 
+               table += "<td>";
+               table += "<a href=delete?itemID=" + lipstick.getItemID() + "> Delete </a>";
+               table +="</td>";
                
-                
+               
+               
             table += "</tr>";
             }
         } catch (SQLException ex) {

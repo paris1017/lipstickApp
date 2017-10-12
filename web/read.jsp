@@ -20,6 +20,8 @@
         
          <%= table %>
      
+         <br><br>
+         <a href="add"> Add a New Lipstick</a>
         
     </body>
 </html>
