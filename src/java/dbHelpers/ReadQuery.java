@@ -97,7 +97,9 @@ public class ReadQuery {
                 table += "Price";
                 table += "</th>";
                 
-          
+                table += "<th>";
+                table += "";
+                table += "</th>";
         
         try {
             while(this.results.next()){

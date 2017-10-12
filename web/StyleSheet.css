@@ -8,20 +8,16 @@ and open the template in the editor.
     Author     : guohuinan
 */
 
-.wrap {text-align:center; width: 80%; margin: 0 auto; border: 1px solid black; margin-top:20px;}
-.header {text-align:left; padding:20px}
-.headerText {float:left; height: 105px; padding-top: 50px; padding-left: 20px;}
-
+h1{text-align:center;background-color: #F08080; border: 1px solid white;padding:25px;}
 body {background-color: #D2B48C;}
 table {border-collapse: collapse; width: 100%; text-align: center;}
-table, th, td {border: 2px solid white;}
-th {background-color: #FFFF99; color: #696969; height: 50px; vertical-align: bottom; padding: 15px;text-align: left;}
+table, th, td {border: 2px solid white;padding:15px;}
+th {background-color: #FFFF99; color: #696969; height: 50px; vertical-align: bottom;  text-align: left;}
 table tr:hover td{background-color: #CCCCCC;}
-table tr:nth-child(even) {background-color: #F2F2F2}
-table tr:nth-child(odd) {background-color: #EDEDED}
-td {background: #F08080; color: #FFFFFF; height: 30px; vertical-align: bottom; padding: 10px;text-align: left;}
-label {display: inline-block; text-align: left; width: 60px;}
+td {background: #F08080; color: #FFFFFF; height: 30px; vertical-align: bottom; text-align: left;}
+tr:nth-child(even) td{background-color: #EDEDED;}
+label {display: inline-table; width: 60px;color:#696969;padding:20px;}
 
 
 
-
+input[type=text] {padding: 12px 20px; margin: 8px 0; box-sizing: border-box;}
