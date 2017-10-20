@@ -20,7 +20,7 @@
             
               <%@ include file="includes/menu.jsp" %>
               
-         <div class="main">   
+      <div class="main">   
         <h1>Add a New Lipstick</h1>
         
         <form name="addForm" action="addLipstick" method="get">
@@ -39,7 +39,9 @@
             <br>
             <input type="submit" name="submit" value="Submit"/>
         </form>
-         </div>
+        
+      
+      </div>
          
         
          <%@ include file="includes/footer.jsp" %>

@@ -1,5 +1,5 @@
 <%-- 
-    Document   : indext
+    Document   : index
     Created on : Oct 4, 2017, 10:04:42 AM
     Author     : guohuinan
 --%>
@@ -12,7 +12,9 @@
         <title>My Lipsticks</title>
         <link rel="StyleSheet" type="text/css" href="StyleSheet.css" />
     </head>
+    
     <body>
+        
         <div class="wrap"> 
 
             
@@ -20,17 +22,24 @@
             
               <%@ include file="includes/menu.jsp" %>
               
-         <div class="main">     
+           
         
              <h1>My Lipsticks Database</h1>
+             
              <br>
+             
+             
         <a href="read">View All Lipsticks</a>
         <br>
-        
         <a href="search.jsp">Search Lipsticks</a>
-        </div>
+        
+        
+      
         <br><br><br><br>
          <%@ include file="includes/footer.jsp" %>
-        </div>
+        
+         
+         
+        </div> 
     </body>
 </html>
