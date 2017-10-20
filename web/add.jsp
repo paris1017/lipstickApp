@@ -13,6 +13,14 @@
         <link rel="StyleSheet" type="text/css" href="StyleSheet.css" />
     </head>
     <body>
+        <div class="wrap"> 
+
+            
+              <%@ include file="includes/header.jsp" %>
+            
+              <%@ include file="includes/menu.jsp" %>
+              
+         <div class="main">   
         <h1>Add a New Lipstick</h1>
         
         <form name="addForm" action="addLipstick" method="get">
@@ -31,5 +39,10 @@
             <br>
             <input type="submit" name="submit" value="Submit"/>
         </form>
+         </div>
+         
+        
+         <%@ include file="includes/footer.jsp" %>
+        </div>
     </body>
 </html>

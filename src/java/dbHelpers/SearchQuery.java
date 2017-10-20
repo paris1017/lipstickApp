@@ -24,7 +24,7 @@ import model.Lipsticks;
 public class SearchQuery {
     
     
-        private Connection conn;
+    private Connection conn;
     private ResultSet results;
     
     public SearchQuery(){

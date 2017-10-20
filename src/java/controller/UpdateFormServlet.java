@@ -5,7 +5,7 @@
  */
 package controller;
 
-import dbHelpers.SearchQuery;
+import dbHelpers.ReadRecord;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -14,14 +14,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-
+import model.Lipsticks;
 /**
  *
  * @author guohuinan
  */
-@WebServlet(name = "SearchServlet", urlPatterns = {"/search"})
-public class SearchServlet extends HttpServlet {
+@WebServlet(name = "UpdateFormServlet", urlPatterns = {"/update"})
+public class UpdateFormServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,10 +39,10 @@ public class SearchServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet SearchServlet</title>");            
+            out.println("<title>Servlet UpdateFormServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet SearchServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet UpdateFormServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -76,21 +75,21 @@ public class SearchServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        String productName = request.getParameter("searchVal");
+          int itemID = Integer.parseInt(request.getParameter("itemID"));
         
-        SearchQuery sq = new SearchQuery();
+        ReadRecord rr = new ReadRecord(itemID);
         
-        sq.doSearch(productName);
-        String table = sq.getHTMLTable();
+        rr.doRead();
+        Lipsticks lipstick = rr.getLipstick();
         
-        request.setAttribute("table", table);
-        String url = "/read.jsp";
+        request.setAttribute("lipstick", lipstick);
+        
+        String url = "/updateForm.jsp";
         
         RequestDispatcher dispatcher = request.getRequestDispatcher(url);
         dispatcher.forward(request, response);
-    }
        
-    
+    }
 
     /**
      * Returns a short description of the servlet.

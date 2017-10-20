@@ -5,7 +5,7 @@
  */
 package controller;
 
-import dbHelpers.SearchQuery;
+import dbHelpers.UpdateQuery;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -14,14 +14,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import model.Lipsticks;
 
 /**
  *
  * @author guohuinan
  */
-@WebServlet(name = "SearchServlet", urlPatterns = {"/search"})
-public class SearchServlet extends HttpServlet {
+@WebServlet(name = "UpdateServlet", urlPatterns = {"/updateLipstick"})
+public class UpdateServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,10 +40,10 @@ public class SearchServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet SearchServlet</title>");            
+            out.println("<title>Servlet UpdateServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet SearchServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet UpdateServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -76,21 +76,33 @@ public class SearchServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        String productName = request.getParameter("searchVal");
         
-        SearchQuery sq = new SearchQuery();
+        int itemID = Integer.parseInt(request.getParameter("itemid"));
+        String productName = request.getParameter("productname");
+        String brand = request.getParameter("brand");
+        String color = request.getParameter("color");
+        int price = Integer.parseInt(request.getParameter("price"));
         
-        sq.doSearch(productName);
-        String table = sq.getHTMLTable();
         
-        request.setAttribute("table", table);
-        String url = "/read.jsp";
+        Lipsticks lipstick = new Lipsticks();
+        lipstick.setItemID(itemID);
+        lipstick.setProductName(productName);
+        lipstick.setBrand(brand);
+        lipstick.setColor(color);
+        lipstick.setPrice(price);
         
-        RequestDispatcher dispatcher = request.getRequestDispatcher(url);
-        dispatcher.forward(request, response);
+        
+         UpdateQuery uq = new UpdateQuery();
+         uq.doUpdate(lipstick);
+         
+         String url;
+        url = "/read";
+         
+         RequestDispatcher dispatcher = request.getRequestDispatcher(url);
+         dispatcher.forward(request, response);
+        
+        
     }
-       
-    
 
     /**
      * Returns a short description of the servlet.

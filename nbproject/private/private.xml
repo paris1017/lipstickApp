@@ -3,15 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/guohuinan/NetBeansProjects/lipstickApp/src/java/controller/DeleteServlet.java</file>
-            <file>file:/Users/guohuinan/NetBeansProjects/lipstickApp/src/java/dbHelpers/ReadQuery.java</file>
             <file>file:/Users/guohuinan/NetBeansProjects/lipstickApp/web/read.jsp</file>
-            <file>file:/Users/guohuinan/NetBeansProjects/lipstickApp/src/java/controller/AddForm.java</file>
             <file>file:/Users/guohuinan/NetBeansProjects/lipstickApp/web/add.jsp</file>
-            <file>file:/Users/guohuinan/NetBeansProjects/lipstickApp/src/java/dbHelpers/DeleteQuery.java</file>
             <file>file:/Users/guohuinan/NetBeansProjects/lipstickApp/web/index.jsp</file>
-            <file>file:/Users/guohuinan/NetBeansProjects/lipstickApp/src/java/controller/AddServlet.java</file>
-            <file>file:/Users/guohuinan/NetBeansProjects/lipstickApp/src/java/dbHelpers/AddQuery.java</file>
+            <file>file:/Users/guohuinan/NetBeansProjects/lipstickApp/web/includes/menu.jsp</file>
+            <file>file:/Users/guohuinan/NetBeansProjects/lipstickApp/web/includes/header.jsp</file>
+            <file>file:/Users/guohuinan/NetBeansProjects/lipstickApp/web/search.jsp</file>
             <file>file:/Users/guohuinan/NetBeansProjects/lipstickApp/web/StyleSheet.css</file>
         </group>
     </open-files>
